@@ -38,10 +38,10 @@ def main():
     agent = Agent(
         name="Gemini Agent",
         instructions="An agent that uses Gemini 2.0 Flash model for text generation.",
-        run_config=config,
+        model=model
     )
 
-    result = Runner.run(agent, "What is the capital of France?")
+    result = await Runner.run(agent, "What is the capital of France?")
     print("Result:", result)
 
 
